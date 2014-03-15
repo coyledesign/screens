@@ -15,10 +15,10 @@ fi
 #Loop through urls.txt and give it to phantomJS. If no text exists in urls.txt then it will just do the base url
 for var in `tr '\n' ' ' < urls.txt`
 do
-	echo "Creating screenshot for hash $1$var"	
+	echo "Creating screenshot for url $1$var"	
 	phantomjs screenshots.js $1 "$var" &
 done
 wait
 
 echo "Converting files to pdf"
-convert screens/*.png images/screens.pdf
+convert images/*.png images/screens.pdf
