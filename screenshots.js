@@ -7,10 +7,6 @@ page.viewportSize = {
   height: 768
 };
 
-
-
-
-
 if(args.length < 3) {
 	//@todo insert usage info
 	console.log('Not enough arguments');
