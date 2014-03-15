@@ -1,6 +1,15 @@
 var page = require("webpage").create();
 var args = require('system').args;
-var cookies = require('./cookies.json');
+var fs = require('fs');
+
+var cookies = [];
+//Check if cookies file exists, if so then load it.
+fs.exists('./cookies.json', function(exists) {
+  if (exists) {
+    var cookies = require('./cookies.json');
+  } 
+});
+
 
 for (var i = 0; i < cookies.length; i++) {
 	var cookie = phantom.addCookie(cookies[i]);

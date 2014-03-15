@@ -18,4 +18,3 @@ Please note that the text in urls.txt should contain anything that needs to come
 ###Todo
 - Change script so that it accepts flags instead of just sequenced arguments
 - Allow view port size to be changed in the arguments
-- Cookie Mechanism
