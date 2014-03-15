@@ -15,6 +15,9 @@ This simple screenshot generator script will parse a text file and then use Phan
 Please note that the text in urls.txt should contain anything that needs to come after the base path
 
 
+##Cookies
+To add cookies copy the file config/cookies.json to the root of the project. One example has already been put in. Simply edit the example and add new objects of the same form to the array as needed.
+
 ###Todo
 - Change script so that it accepts flags instead of just sequenced arguments
 - Allow view port size to be changed in the arguments
