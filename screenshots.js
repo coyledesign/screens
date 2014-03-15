@@ -1,5 +1,11 @@
 var page = require("webpage").create();
 var args = require('system').args;
+var cookies = require('./cookies.json');
+
+for (var i = 0; i < cookies.length; i++) {
+	var cookie = phantom.addCookie(cookies[i]);
+	console.log(cookie);
+};
 
 //Set Viewport size
 page.viewportSize = {
