@@ -15,6 +15,12 @@ for (var i = 0; i < cookies.length; i++) {
 	var cookie = phantom.addCookie(cookies[i]);
 };
 
+phantom.addCookie({
+      "name":"cookie-agreed-en",
+      "value":2,
+      "domain":"lampreview.emedfusion.com"
+   });
+
 //Set Viewport size
 page.viewportSize = {
   width: 1024,

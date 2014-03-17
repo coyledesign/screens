@@ -16,9 +16,8 @@ fi
 for var in `tr '\n' ' ' < urls.txt`
 do
 	echo "Creating screenshot for url $1$var"	
-	phantomjs screenshots.js $1 "$var" &
+	phantomjs screenshots.js $1 "$var"
 done
-wait
 
 echo "Converting files to pdf"
 convert images/*.png images/screens.pdf
