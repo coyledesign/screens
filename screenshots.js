@@ -50,6 +50,7 @@ function getScreenShot(safeHash) {
 }
 
 function just_wait(safeHash) {
+  console.log("waiting");
     setTimeout(function() {
             getScreenShot(safeHash)
             phantom.exit();
