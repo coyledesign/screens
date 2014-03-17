@@ -41,10 +41,17 @@ var path = basePath + hash;
 var safeHash = hash.split('.').join('-');
 
 page.open(path, function() {
-  setTimeout(getScreenShot(safeHash), 100);
+  just_wait(safeHash);
   phantom.exit();
 });
 
 function getScreenShot(safeHash) {
 	page.render('images/screen-' + safeHash + '.png');
+}
+
+function just_wait(safeHash) {
+    setTimeout(function() {
+            getScreenShot(safeHash)
+            phantom.exit();
+    }, 2000);
 }
